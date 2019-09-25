@@ -1,0 +1,15 @@
+@import url('0-tools/normalize.css');
+@import url('0-tools/bourbon/_bourbon.scss');
+
+@import url('1-base/vars.css');
+@import url('1-base/base.css');
+@import url('4-layouts/header.css');
+@import url('4-layouts/home.css');
+
+@import url('3-sections/home-hero.css');
+@import url('3-sections/home-about.css');
+@import url('3-sections/home-projects.css');
+@import url('3-sections/home-skills.css');
+@import url('3-sections/timeline.css');
+@import url('3-sections/home-contact.css');
+@import url('3-sections/home-footer.css');

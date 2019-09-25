@@ -1,0 +1,35 @@
+﻿@model PersonalWebsite.Models.Project
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.Name</h1>
+
+
+@*@if (Model.HardwareRequired.Count != 0)
+    {
+        <h3>Hardware Required</h3>
+        <ul>
+            @foreach (var n in Model.HardwareRequired)
+            {
+                <li>n</li>
+            }
+        </ul>
+    }*@
+
+@*@if (Model.KnowledgeRequired.Count != 0)
+    {
+        <h3>Hardware Required</h3>
+        <ul>
+            @foreach (var n in Model.KnowledgeRequired)
+            {
+                <li>n</li>
+            }
+        </ul>
+    }*@
+
+<h3>Description</h3>
+<p>@Model.Description</p>
+
+<iframe width="560" height="315" src="@Model.URL" frameborder="0" allowfullscreen></iframe>
+<a class="box-border" href="www.github.com">See GitHub Page</a>

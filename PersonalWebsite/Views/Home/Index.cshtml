@@ -1,0 +1,26 @@
+﻿@model PersonalWebsite.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    #image{
+        border: 7px solid #b5b5b5;
+        padding: 0;
+    }
+</style>
+
+<div class="col-xs-12" style="position: relative; height: 100vh">
+    <!-- Picture and Title Div -->
+    <div class="col-xs-6 col-xs-offset-3 text-center vcenter">
+        <!-- Picture -->
+        <div>
+            <img src="~/images/portfolio_picture.jpg" id='image' style="border-radius: 50%;" />
+        </div>
+
+        <!-- Title -->
+        <div>
+            <h2>Clayton Feathers</h2>
+            <h4>I'm a <b>Web Developer/Software Developer</b></h4>
+        </div>
+    </div>
+</div>

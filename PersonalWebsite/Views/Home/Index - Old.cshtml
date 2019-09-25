@@ -1,0 +1,247 @@
+﻿@model PersonalWebsite.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="home_sections">
+    <!--Hero Section-->
+    <section class="container hero" id="hero">
+        <div class="hero-title-container">
+            <h3><span style="font-size:65px;">C</span>layton <span style="font-size:65px;">F</span>eathers</h3>
+            <div class="hero_lead">
+                <h4>Software Developer</h4>
+            </div>
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon-row">
+                <div class="icon-container">
+                    <a href="#about"><img class="icon" src="~/images/about.svg" /></a>
+                    <p>About</p>
+                </div>
+                <div class="icon-container">
+                    <a href="#skills"><img class="icon" src="~/images/laptop.svg" /></a>
+                    <p>Skills</p>
+                </div>
+                <div class="icon-container">
+                    <a href="#events"><img class="icon" src="~/images/info_icon.svg" /></a>
+                    <p>Experience</p>
+                </div>
+                <div class="icon-container">
+                    <a href="#contact"><img class="icon" src="~/images/contact.svg" /></a>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Section-->
+    <section class="about" id="about">
+        <div class="flex flex--space--around" id='about'>
+            <div class="col-1 profile">
+                <img src="~/images/portfolio_picture.jpg" id='image' style="border-radius: 50%;" />
+
+                <!--Linked in and resume links-->
+                <div class="block-formation social-media">
+                    <div>
+                        <img src="~/images/pdf-logo.png" style="float: left; width: 32px; height: 32px; margin-top: 16px; margin-right: 5px;" />
+                        <h5 style="float: right;"><a href="Resume.docx" target='_blank' title="Click here to open a Word document">DOWNLOAD RESUME</a></h5>
+                    </div>
+                    <div>
+                        <img src="~/images/linkedin.png" style="float: left; width: 32px; height: 32px; margin-top: 16px; margin-right: 5px;" />
+                        <h5><a href="https://www.linkedin.com/in/clayton-t-feathers-456517119/" title="Navigate to Clayton's LinkedIn">LINKEDIN</a></h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-1 order-first description">
+                <h2>Hey, I'm Clayton.</h2>
+                <p class="light-font">I am a 21 year-old software developer, life-long learner, and technology enthusist.</p>
+                <blockquote class="italic">"I am ready to face any challenges that might be foolish enough to face me."<br>&nbsp;&nbsp;&nbsp;&nbsp;-Dwight Schrute</blockquote>
+                <span class="divider"></span>
+
+                <br/>
+                <p class="light-font">
+                    <span style="font-weight: bold;">I'm a senior-level student at East Tennessee State University</span> in East Tennessee studying computer science and mathematics. I strive to create
+                    software that improves everyday lives. I love learning new and better ways to create seamless user experiences with clean, efficient, and
+                    scalable code. I consider work an ongoing education, and I'm always looking for opportunities to work with those who are willing to share
+                    their knowledge as much as I want to learn. At the end of the day, my primary goal is to create something beautiful with people that bring
+                    out the best in me.
+                </p>
+                <p class="light-font"><span style="font-weight: bold;">When I'm not in front of a computer screen</span>, I'm probably playing with my RC car, playing drums, or taking something apart.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Projects Section-->
+    <section class="projects" id="projects">
+        <div class="projects-wrapper">
+            <div class="projects-content">
+                <div class="projects-title">
+                    <h1>Projects</h1>
+                    <span class="divider"></span>
+                </div>
+                <div class="projects-grid">
+                    @for (int i = 0; i < Model.Projects.Count; i++)
+                    {
+                        // If the number is even
+                        if (((Model.Projects.Count) - i) >= 2)
+                        {
+                            <div class="grid-row bottom-line">
+                                <div class="grid-cell right-line">
+                                    <!--Put Content-->
+                                    <h4>@Model.Projects[i].Name</h4>
+                                    <p class="light-font">@Model.Projects[i].BreifDescription</p>
+                                    <a class="box-border" href="/Project/Details/@Model.Projects[i].Id">Click to See More</a>
+                                </div>
+                                <div class="grid-cell">
+                                    <!--Put Content-->
+                                    <h4>@Model.Projects[i+1].Name</h4>
+                                    <p class="light-font">@Model.Projects[i+1].BreifDescription</p>
+                                    <a class="box-border" href="/Project/Details/@Model.Projects[i+1].Id">Click to See More</a>
+                                </div>
+                            </div>
+                            i = i + 1;
+                        }
+                        else
+                        {
+                            <div class="grid-row bottom-line">
+                                <div class="grid-cell right-line">
+                                    <!--Put Content-->
+                                    <h4>@Model.Projects[i].Name</h4>
+                                    <p class="light-font">@Model.Projects[i].BreifDescription</p>
+                                    <a class="box-border" href="/Project/Details/@Model.Projects[i].URL">Click to See More</a>
+                                </div>
+                            </div>
+                        }
+
+                    }
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Skills Section-->
+    <section class="skills" id="skills">
+        <div class="skills-wrapper">
+            <div class="skills-title">
+                <h1>Skills</h1>
+                <span class="divider"></span>
+            </div>
+            <div class="skills-container">
+                <div class="flex-item">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>C#</li>
+                        <li>.NET</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>ASP.NET</li>
+                    </ul>
+                </div>
+
+                <div class="flex-item">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li>Eclipse</li>
+                        <li>Oracle SQL</li>
+                        <li>Photoshop</li>
+                    </ul>
+                </div>
+                <div class=" flex-item block-formation">
+                    <div>
+                        <h3>My Projects</h3>
+                        <a href="https://github.com/feathersct" target='_blank' title="Navigate to Clayton's Github Page"><img src="~/images/github-logo.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Timeline Section-->
+    <section class="events" id="events">
+        <div class="timeline-heading">
+            <h1>Experience</h1>
+            <span class="divider"></span>
+        </div>
+        <section id="cd-timeline" class="cd-container">
+        @if (Model.Events.Count > 0)
+        {
+
+            <div class="cd-timeline-block" id="school-block">
+                <div class="cd-timeline-img cd-picture">
+                    <img src="~/images/School-icon.svg" alt="School">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content education">
+                    <h2>@Model.Events[0].Header2</h2>
+                    <h3>@Model.Events[0].Header3</h3>
+                    <p>@Model.Events[0].Description</p>
+                    <span class="cd-date">@Model.Events[0].StartTime.ToString("y") - @Model.Events[0].EndTime.ToString("y")</span>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block" id="work-block">
+                <div class="cd-timeline-img cd-movie">
+                    <img src="~/images/work-icon.svg" alt="Movie">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content hmg">
+                    <h2>@Model.Events[1].Header2</h2>
+                    <h3>@Model.Events[1].Header3</h3>
+                    <p>
+                        @Model.Events[1].Description
+                    </p>
+                    <span class="cd-date">@Model.Events[1].StartTime.ToString("y") - @Model.Events[1].EndTime.ToString("y")</span>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block" id="nfs-block">
+                <div class="cd-timeline-img cd-picture">
+                    <img src="~/images/work-icon.svg" alt="School">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content education">
+                    <h2>@Model.Events[2].Header2</h2>
+                    <h3>@Model.Events[2].Header3</h3>
+                    <p>@Model.Events[2].Description</p>
+                    <span class="cd-date">@Model.Events[2].StartTime.ToString("y") - @Model.Events[2].EndTime.ToString("y")</span>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+            <!--Extra block
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                    <img src="img/cd-icon-picture.svg" alt="Picture">
+                </div>
+
+                <div class="cd-timeline-content">
+                    <h2>Title of section 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+                    <a href="#0" class="cd-read-more">Read more</a>
+                    <span class="cd-date">Jan 24</span>
+                </div>
+            </div> -->
+        }
+        </section> <!-- cd-timeline -->
+    </section>
+
+    <!-- Contact Me Section -->
+    <partial name="ContactMe.cshtml"/>
+
+
+    <!--Footer Section-->
+    <section class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <p>© Clayton Feathers</p>
+            </div>
+
+        </div>
+    </section>
+</div>

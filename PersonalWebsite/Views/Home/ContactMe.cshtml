@@ -1,0 +1,39 @@
+﻿
+
+<!--Add in actually content text fields later-->
+<!--Contact Section-->
+<section class="contact" id="contact">
+    <div class="contact-wrapper">
+        <h1>Get In Touch</h1>
+        <span class="divider"></span>
+
+        <div class="flex flex--center">
+            <div class="col-1">
+                <div class="contact-content">
+                    <p>If you have a question, comment, or like what I do send me a message and I'll respond promptly. </p>
+
+                    @using (Html.BeginForm("ContactMe", "Home", FormMethod.Post, null))
+                    {
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    }
+                </div>
+            </div>
+
+            <!--<div class="col-1">
+                <div id="map">
+            </div>-->
+        </div>
+    </div>
+</section>

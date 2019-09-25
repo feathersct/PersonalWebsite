@@ -1,0 +1,143 @@
+.hero
+{
+  background-color: white;
+  /*background-image: url('../../images/hero-bg.jpg');*/
+  background-image: url('../../images/hero-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+  display: block;
+
+}
+
+.hero-title-container
+{
+     position: relative;
+     text-align: center;
+     width: 100%;
+     padding: 0 5%;
+     top: 45%;
+     transform: translateY(-45%);
+}
+
+
+.hero h3
+{
+     position: relative;
+     display: block;
+  color: white;
+  font-size: 70px;
+  line-height: 1;
+  margin-bottom: 20px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+
+}
+
+.hero h4
+{
+     position: relative;
+  color: white;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 10px;
+
+}
+
+.hero hr
+{
+  border-color: #BD5248;
+  border-width: .5px;
+  margin: 5px;
+}
+
+.hero .hero_lead
+{
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+}
+
+.icon-wrapper
+{
+     position: absolute;
+     left: 0;
+     bottom: 100px;
+     width: 100%;
+     font-size: 0;
+     text-align: center;
+}
+
+.icon{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
+.icon-container
+{
+  margin: 0px 20px;
+  display: inline-block;
+  width: auto;
+  color: white;
+  opacity: .7;
+}
+
+.icon-container:hover
+{
+  animation: fade-in 1s forwards;
+}
+
+.icon-container p
+{
+  font-size: 17px;
+}
+
+.icon-row
+{
+  position: relative;
+  margin: 0 auto;
+}
+
+@keyframes font-big
+{
+    from{ font-size: 15px;}
+    to{ font-size: 20px;}
+}
+
+
+
+@media only screen and (max-width: 640px)
+{
+  .hero, .hero .hero_lead
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h3
+  {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+}
+
+@-webkit-keyframes fadein{
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+
+
+@media only screen and (max-width: 475px)
+{
+  .icon-wrapper
+  {
+    display: none;
+  }
+}

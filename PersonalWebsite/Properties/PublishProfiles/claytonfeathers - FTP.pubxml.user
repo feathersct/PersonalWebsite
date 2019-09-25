@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1TQqrB9hTUucWLbfGUPq+QAAAAACAAAAAAAQZgAAAAEAACAAAAD0QGJ+bYKq1XUkax8sLajv5bEaT8u1rZ5mjqjq+CAaNQAAAAAOgAAAAAIAACAAAAC3ohQBpsJ+0HPdsFY/kFaLukkKpb7nx+5HLE4NUFND44AAAABkVgRdXgvKQJcbawPD1gRufPPAARgaV3BXOWDo00CU9bgy5JQpL5dooFkxfTZBYiFSSBJ3oOSdGx0jjNqvlhCk5lxX0EQSzeWSKylZ5f2941TWdEUlJ1bgXBTX/o9vBX16S+cETwmeHzCjJ4QiJtzbOjVDOYwWRA32iXgKmNnf2EAAAAAvkTvSuc9o/Q6I5pcmeN5npfQoKL3VDKE0h9U3OCIKxMfGeh4Rkn19l0CI0JPqyz7pMvOQRfusPrvf5GAxZ954</EncryptedPassword>
+    <_PublishTargetUrl>ftp://waws-prod-dm1-053.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>08/06/2019 00:01:31</publishTime>
+    </File>
+    <File Include="Microsoft.Data.Sqlite.dll">
+      <publishTime>01/24/2019 23:30:00</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>01/24/2019 23:30:00</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>01/24/2019 23:30:06</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>01/24/2019 23:30:12</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Sqlite.dll">
+      <publishTime>01/24/2019 23:30:36</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>06/07/2018 00:27:02</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>06/07/2018 00:27:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
