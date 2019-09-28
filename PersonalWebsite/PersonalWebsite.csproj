@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <UserSecretsId>8dd0acc7-caaf-4381-acdd-109b87a7e6ba</UserSecretsId>
     <StartupObject>PersonalWebsite.Program</StartupObject>
+	<RuntimeFrameworkVersion>2.2.0</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>

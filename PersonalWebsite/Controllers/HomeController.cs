@@ -45,8 +45,15 @@ namespace PersonalWebsite.Controllers
             return View();
         }
 
+        public IActionResult ContactMe()
+        {
+            var vm = new ContactViewModel();
+
+            return View(vm);
+        }
+
         [HttpPost]
-        public IActionResult ContactMe(string firstname, string lastname, string email, string subject)
+        public IActionResult ContactMe(ContactViewModel viewModel)
         {
             var result = "Passed";
 
@@ -55,12 +62,11 @@ namespace PersonalWebsite.Controllers
             smtpClient.Credentials = new System.Net.NetworkCredential("claytonfeathers@live.com", "please21");
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-            MailMessage mailMessage = new MailMessage(email, "claytonfeathers@live.com");
-            mailMessage.Subject = "Hello this is an email from claytonfeathers.net";
-            mailMessage.Body = subject;
+            MailMessage mailMessage = new MailMessage(viewModel.Email, "claytonfeathers@live.com");
+            mailMessage.Subject = "I saw your website, my name is " + viewModel.Name;
+            mailMessage.Body = viewModel.Message;
 
             smtpClient.Send(mailMessage);
-
 
             return Content(result);
         }

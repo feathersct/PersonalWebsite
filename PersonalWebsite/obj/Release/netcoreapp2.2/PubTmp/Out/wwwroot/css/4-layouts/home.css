@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 
 /* Color Scheme
 
-    #0B0C10 - Dark Blue/Black
-    #1F2833 - Grey
-    #C5C6C7 - Light Grey
-    #66FCF1 - Neon Blue
-    #45A29E - Darker Neon Blue
+    Sienna - #8C4C34
+    Sienna - #7C3C34
+    Dark Slate Gray - #1B1E2E
+    Rosy Brown - #C0ADA6
+    Indian Red - #A36A55
 
 */
 
@@ -21,9 +21,9 @@
     }
 
 body {
-    background: #000;
+    background: #8C4C34;
     /*background: linear-gradient( rgba(69, 162, 158, 0.45), rgba(69, 162, 158, 0.45) ), url('../../images/grey_background.jpg');*/
-    background: linear-gradient( rgba(102, 252, 241, 0.25), rgba(102, 252, 241, 0.25) ), url('../../images/grey_background.jpg');
+    background: linear-gradient( rgba(231, 186, 152, 0.65), rgba(231, 186, 152, 0.65) ), url('../../images/grey_background.jpg');
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
@@ -101,7 +101,7 @@ a {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-    background: #0b0c10;
+    background: #1B1E2E;
     color: #c5c6c7;
     transition: all 0.3s;
 }
@@ -112,7 +112,7 @@ a {
 
     #sidebar .sidebar-header {
         padding: 20px;
-        background: #0b0c10;
+        background: #1B1E2E;
     }
 
 #sidebar ul.components {
@@ -137,16 +137,28 @@ a {
         /*background: #d8d8d8;*/
         text-decoration: none;
     }
-
+/*
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #45a29e;
-    /*background: #d8d8d8;*/
+    color: #45a29e;*/
+    /*background: #d8d8d8;
 }
-
+*/
 ul ul a {
     font-size: 2em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    font: 32px Arial, sans-serif;
 }
 
 

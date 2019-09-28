@@ -23,7 +23,7 @@
 body {
     background: #8C4C34;
     /*background: linear-gradient( rgba(69, 162, 158, 0.45), rgba(69, 162, 158, 0.45) ), url('../../images/grey_background.jpg');*/
-    background: linear-gradient( rgba(192, 173, 166, 0.5), rgba(192, 173, 166, 0.5) ), url('../../images/grey_background.jpg');
+    background: linear-gradient( rgba(231, 186, 152, 0.65), rgba(231, 186, 152, 0.65) ), url('../../images/grey_background.jpg');
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
@@ -137,16 +137,28 @@ a {
         /*background: #d8d8d8;*/
         text-decoration: none;
     }
-
+/*
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #45a29e;
-    /*background: #d8d8d8;*/
+    color: #45a29e;*/
+    /*background: #d8d8d8;
 }
-
+*/
 ul ul a {
     font-size: 2em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    font: 32px Arial, sans-serif;
 }
 
 
